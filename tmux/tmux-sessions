@@ -1,0 +1,19 @@
+# Сессия todo
+new-session -d -s todo -n tasks
+send-keys -t todo:1 "taskwarrior-tui" Enter
+new-window -t todo -n todo.txt
+send-keys -t todo:2 "nvim ~/todo.txt" Enter
+
+# Сессия monitoring
+new-session -d -s monitoring -n btop
+send-keys -t monitoring:1 "btop" Enter
+
+# Сессия java
+new-session -d -s java -n term1
+send-keys -t java:1 "cd ~/projects/java" Enter
+new-window -t java -n term2
+send-keys -t java:2 "cd ~/projects/java" Enter
+
+# Пустая сессия default
+new-session -d -s default
+
